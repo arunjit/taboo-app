@@ -5,7 +5,8 @@ var roole = require('gulp-roole');
 var symlink = require('gulp-symlink');
 
 var SRC = 'src';
-var DEV = 'dev';
+var DEV = 'build/dev';
+var DIST = 'build/dist'
 
 gulp.task('symlink', function() {
   return gulp.src(['src/**/*.*', '!src/**/*.roo']).
