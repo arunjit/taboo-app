@@ -1,0 +1,11 @@
+<link rel="import" href="../packages/font-roboto/roboto.html">
+<link rel="import" href="../packages/paper-input/paper-input.html">
+
+<polymer-element name="taboo-app" attributes="name" noscript>
+  <template>
+    <link rel="stylesheet" type="text/css" href="taboo-app.css">
+
+    <h3>{{name}}</h3>
+    <paper-input floatinglabel label="Name" value="{{name}}"></paper-input>
+  </template>
+</polymer-element>

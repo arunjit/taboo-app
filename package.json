@@ -1,0 +1,28 @@
+{
+  "name": "taboo-app",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-connect": "^2.0.6",
+    "gulp-filter": "^0.5.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-roole": "^0.1.0",
+    "gulp-sym": "0.0.13",
+    "gulp-watch": "^0.6.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arunjit/taboo-app.git"
+  },
+  "author": "Arunjit Singh <opensrc@ajsd.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arunjit/taboo-app/issues"
+  },
+  "homepage": "https://arunjit.github.io/taboo-app"
+}
