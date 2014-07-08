@@ -1,6 +1,7 @@
 var path = require('path');
 var gulp = require('gulp');
 
+var connect = require('gulp-connect');
 var filter = require('gulp-filter');
 var rimraf = require('gulp-rimraf');
 var roole = require('gulp-roole');
@@ -58,4 +59,18 @@ gulp.task('watch-roole', function() {
       .pipe(gulp.dest(DEV));
 });
 
-gulp.task('dev', ['symlink', 'symlink-packages', 'watch-roole', 'watch-srcs']);
+gulp.task('devserver', function() {
+  connect.server({
+    root: DEV,
+    port: 8000
+  });
+});
+
+gulp.task('default', [
+  'symlink',
+  'symlink-packages',
+  'roole',
+  'watch-roole',
+  'watch-srcs',
+  'devserver'
+]);
