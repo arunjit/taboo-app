@@ -1,4 +1,11 @@
 :host {
   display: block;
   font-family: "RobotoDraft", sans-serif;
+  position: relative;
+}
+
+paper-fab {
+  bottom: 20px;
+  position: absolute;
+  right: 20px;
 }
