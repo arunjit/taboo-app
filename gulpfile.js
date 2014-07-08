@@ -1,12 +1,18 @@
 var path = require('path');
 
 var gulp = require('gulp');
+var rimraf = require('gulp-rimraf');
 var roole = require('gulp-roole');
 var symlink = require('gulp-sym');
 
 var SRC = 'src';
 var DEV = 'build/dev';
 var DIST = 'build/dist'
+
+gulp.task('clean', function() {
+  return gulp.src('build', {read: false})
+      .pipe(rimraf({force: true}));
+});
 
 gulp.task('symlink', function() {
   return gulp.src(['src/**/*.*', '!src/**/*.roo']).
