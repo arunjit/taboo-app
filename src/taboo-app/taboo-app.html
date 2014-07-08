@@ -12,18 +12,18 @@
   <template>
     <link rel="stylesheet" type="text/css" href="taboo-app.css">
     <core-drawer-panel id="drawerPanel" responsiveWidth="600px">
-      <core-header-panel drawer mode="waterfall">
+      <core-header-panel drawer mode="waterfall" fit>
         <core-toolbar>
           <span flex>Options</span>
         </core-toolbar>
       </core-header-panel>
-      <core-header-panel main mode="waterfall">
+      <core-header-panel main mode="waterfall" fit>
         <core-toolbar>
           <paper-icon-button icon="menu" on-click="{{toggleOptions}}"></paper-icon-button>
           <span flex>Taboo</span>
           <paper-icon-button icon="more-vert"></paper-icon-button>
-          <paper-fab icon="icons:arrow-forward" on-click="{{nextCard}}"></paper-fab>
         </core-toolbar>
+        <paper-fab icon="icons:arrow-forward" on-click="{{nextCard}}"></paper-fab>
         <!-- Cards go here -->
         <!-- <taboo-card-deck></taboo-card-deck> -->
       </core-header-panel>

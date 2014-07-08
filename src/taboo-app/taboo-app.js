@@ -2,5 +2,7 @@ Polymer('taboo-app', {
   toggleOptions: function() {
     this.$.drawerPanel.togglePanel();
   },
-  nextCard: function() {}
+  nextCard: function() {
+    console.log('NEXT');
+  }
 });
