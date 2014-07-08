@@ -3,13 +3,11 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.html",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.8.5",
     "gulp-roole": "^0.1.0",
-    "gulp-symlink": "^1.1.0",
-    "gulp-watch": "^0.6.8"
+    "gulp-sym": "0.0.13"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/arunjit/taboo-app/issues"
   },
-  "homepage": "https://github.com/arunjit/taboo-app"
+  "homepage": "https://arunjit.github.io/taboo-app"
 }

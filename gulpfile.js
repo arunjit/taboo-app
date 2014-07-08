@@ -2,7 +2,7 @@ var path = require('path');
 
 var gulp = require('gulp');
 var roole = require('gulp-roole');
-var symlink = require('gulp-symlink');
+var symlink = require('gulp-sym');
 
 var SRC = 'src';
 var DEV = 'build/dev';
@@ -10,9 +10,14 @@ var DIST = 'build/dist'
 
 gulp.task('symlink', function() {
   return gulp.src(['src/**/*.*', '!src/**/*.roo']).
-    pipe(symlink.absolute(function(file) {
+    pipe(symlink(function(file) {
       return path.join(path.dirname(file.base), DEV, file.relative);
     }));
+});
+
+gulp.task('symlink-packages', function() {
+  return gulp.src('bower_components')
+      .pipe(symlink(path.join(DEV, 'packages')));
 });
 
 gulp.task('roole', function() {
@@ -25,4 +30,4 @@ gulp.task('watch', function() {
   return gulp.watch('src/**/*.roo', ['roole']);
 });
 
-gulp.task('dev', ['symlink', 'roole']);
+gulp.task('dev', ['symlink', 'symlink-packages', 'roole']);
