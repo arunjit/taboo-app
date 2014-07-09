@@ -8,6 +8,8 @@
 <link rel="import" href="../packages/paper-input/paper-input.html">
 <link rel="import" href="../packages/polymer/layout.html">
 
+<link rel="import" href="taboo-card.html">
+
 <polymer-element name="taboo-app">
   <template>
     <link rel="stylesheet" type="text/css" href="taboo-app.css">
@@ -26,6 +28,7 @@
         <paper-fab icon="icons:arrow-forward" on-click="{{nextCard}}"></paper-fab>
         <!-- Cards go here -->
         <!-- <taboo-card-deck></taboo-card-deck> -->
+        <taboo-card></taboo-card>
       </core-header-panel>
     </core-drawer-panel>
   </template>

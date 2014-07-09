@@ -27,3 +27,8 @@ paper-fab {
   background-color: #526E9C;
   color: #fff;
 }
+
+taboo-card {
+  width: 85%;
+  height: 85%;
+}
